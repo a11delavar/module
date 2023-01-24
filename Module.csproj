@@ -1,15 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
+		<Version>0.1.0</Version>
 		<PackageId>A11d.Module</PackageId>
 		<Authors>A11d</Authors>
 		<Description>Domain-driven modules for ASP.NET minimal APIs.</Description>
-		<License>MIT</License>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageTags>Module, ASP.NET, Minimal API, Endpoint</PackageTags>
 		<RepositoryUrl>https://github.com/a11delavar/module</RepositoryUrl>
 		<Nullable>enable</Nullable>
 		<RestoreFallbackFolders>clear</RestoreFallbackFolders>
 		<DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
 </Project>

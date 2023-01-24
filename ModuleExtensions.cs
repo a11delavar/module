@@ -1,7 +1,5 @@
 namespace A11d.Module;
 
-using System.Reflection;
-
 public static class ModuleExtensions
 {
 	/// <summary>
