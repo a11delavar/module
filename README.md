@@ -1,15 +1,6 @@
+# Module
 
-# Modules
-
-The goal of this package is to provide a way to organize your application into modules to improve cohesion in your codebase. Each module can configure the services in the installation phase, configure the application and define endpoints in the build phase.
-
-## Installation
-
-You can install this package using the following command:
-
-```bash
-dotnet add package A11d.Modules
-```
+A library to facilitate developing with minimal APIs and vertical slicing your application to improve cohesion in your codebase. Each module can configure the services in the installation phase, configure the application and define endpoints in the build phase.
 
 ## API
 
@@ -18,9 +9,7 @@ dotnet add package A11d.Modules
 The `Module` class is the base class for all modules. It provides three virtual methods that you can override to add services, configure the application, and define endpoints:
 
 - `ConfigureServices` to configure your application using the `IServiceCollection` parameter in the installation phase. Calling base is not needed.
-
 - `ConfigureApplication` to configure your application using the `WebApplication` parameter in the build phase. Calling base is not needed.
-
 - `ConfigureEndpoints` to define your application endpoints using the `IEndpointRouteBuilder` parameter in the build phase. Calling base is not needed.
 
 ### Application Entry Point
@@ -29,7 +18,6 @@ In your program entry point, you have two extension methods to install and confi
 
 - `Install` to install your module using the `WebApplicationBuilder` parameter in the installation phase.
 - `Configure` to configure your module using the `WebApplication` parameter in the build phase.
-
 
 ## Usage
 
